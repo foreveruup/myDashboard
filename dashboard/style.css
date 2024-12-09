@@ -1,0 +1,174 @@
+body {
+    background: url('background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    background: url('headerBack.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    color: #cbd5e1;
+}
+
+
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.widget {
+    background-color: #1E293B;
+    color: #ffffff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    min-height: 250px;
+}
+
+.widget h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+}
+
+.day-name {
+    font-weight: bold;
+    text-align: center;
+    padding: 0.5rem;
+    color: #ffffff;
+}
+
+.calendar .day {
+    width: 60%;
+    padding: 0.7rem;
+    background-color: #6b7280;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-left: 20px;
+}
+
+.calendar .day:hover {
+    background-color: darkred;
+    transform: scale(1.1);
+}
+
+.calendar .inactive {
+    background-color: #cbd5e1;
+    color: #6b7280;
+    pointer-events: none;
+}
+
+.calendar .selected-day {
+    background-color: #FF5733 !important;
+}
+
+#cryptoChart {
+    width: 100%;
+    height: 100%;
+}
+
+.todo ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.todo ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2563eb;
+    color: white;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+.todo ul li button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+}
+
+.calculator {
+    background-color: #1E293B;
+    color: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    min-height: 150px;
+}
+
+.calculator input {
+    width: 50%;
+    padding: 0.3rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    border: none;
+    font-size: 0.9rem;
+}
+
+.calculator button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #3b82f6;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.calculator button:hover {
+    background-color: #2563eb;
+}
+
+.calculator p {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+}

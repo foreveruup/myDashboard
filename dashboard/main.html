@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amir's Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<header class="header">
+    <h1>Amir's Dashboard</h1>
+    <p>Welcome!</p>
+</header>
+<main class="dashboard">
+    <!-- виджет конвертера валют -->
+    <section class="widget currency-converter">
+        <h2>Currency Converter</h2>
+        <div class="form-group">
+            <input type="number" id="amount" placeholder="Enter amount">
+            <select id="fromCurrency">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="KZT">KZT</option>
+                <option value="JPY">JPY</option>
+                <option value="RUB">RUB</option>
+                <option value="GBP">GBP</option>
+
+
+            </select>
+            <select id="toCurrency">
+                <option value="EUR">EUR</option>
+                <option value="USD">USD</option>
+                <option value="KZT">KZT</option>
+                <option value="JPY">JPY</option>
+                <option value="RUB">RUB</option>
+                <option value="GBP">GBP</option>
+
+
+            </select>
+            <button id="convertBtn">Convert</button>
+        </div>
+        <p id="conversionResult">Result will appear here</p>
+    </section>
+
+    <!-- калькулятор -->
+
+    <section class="widget calculator">
+        <h2>Calculator</h2>
+        <div class="form-group">
+            <input type="text" id="calcInput" placeholder="Enter equation (e.g., 5+5)">
+            <button id="calculateBtn">Calculate</button>
+        </div>
+        <p id="calcResult">Result will appear here</p>
+    </section>
+
+
+    <!-- виджет погоды -->
+    <section class="widget weather">
+        <h2>Weather</h2>
+        <div class="form-group">
+            <input type="text" id="city" placeholder="Enter city">
+            <button id="getWeatherBtn">Get Weather</button>
+        </div>
+        <div class="weather-info">
+            <h3 id="city-name">City Name</h3>
+            <span id="temperature">--°</span>
+            <p id="condition">--</p>
+            <p>High: <span id="high-temp">--°</span> Low: <span id="low-temp">--°</span></p>
+        </div>
+    </section>
+
+    <!-- виджет задачника -->
+    <section class="widget todo">
+        <h2>To-Do List</h2>
+        <div class="form-group">
+            <input type="text" id="taskInput" placeholder="Enter a task">
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+        <ul id="taskList"></ul>
+    </section>
+
+    <!-- виджет календаря -->
+    <section class="widget calendar">
+        <h2>Calendar</h2>
+        <div class="calendar-header">
+            <button id="prevMonth">←</button>
+            <span id="currentMonth"></span>
+            <button id="nextMonth">→</button>
+        </div>
+        <div class="calendar-grid">
+            <div class="day-name">Sun</div>
+            <div class="day-name">Mon</div>
+            <div class="day-name">Tue</div>
+            <div class="day-name">Wed</div>
+            <div class="day-name">Thu</div>
+            <div class="day-name">Fri</div>
+            <div class="day-name">Sat</div>
+        </div>
+        <div id="calendar" class="calendar-grid"></div>
+    </section>
+
+
+    <!-- виджет криптовалюты -->
+    <section class="widget crypto">
+        <h2>Cryptocurrency Growth</h2>
+        <canvas id="cryptoChart"></canvas>
+    </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
